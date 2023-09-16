@@ -20,7 +20,9 @@ export default function RootLayout({
   return (
     <html lang="en">
 
-      <body className={inter.className}>
+        <body className=" z-[-1] static bg- min-h-screen  bg-[conic-gradient(at_bottom_right,_var(--tw-gradient-stops))]
+         from-white via-white to-slate-900 bg-no-repeat w-full h-full no-scrollbar scroll-smooth">
+
         
         
         {children}

@@ -49,37 +49,44 @@
 
 // export default SearchBar;
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
+import { classrooms } from "../api/classrooms";
 const SearchBar = () => {
-  const [selectedFilters, setselectedFilters] = useState([])
   const [query, setQuery] = useState('')
-
-  let filters = ["Tiếng Việt","Tiếng Anh","Tiếng Trung","IELTS","Nấu Ăn","Fullstack","Frontend","Lập Trình","Backend","Piano","Design","Nhiều Thứ","Vẽ","Lịch Sử","Thuật Toán","Hóa Học"];
+  const [selectedFilters, setSelectedFilters] = useState([]);
+  const [filteredItems, setFilteredItems] = useState(classrooms);
+  let filters = ["IT & CSE","C/C++","","","Tiếng Việt","Tiếng Anh","Tiếng Trung","IELTS","Nấu Ăn","Fullstack","Frontend","Lập Trình","Backend","Piano","Design","Nhiều Thứ","Vẽ","Lịch Sử","Thuật Toán","Hóa Học"];
   const handleSearch = () => {
     // Make a request to the API to search for the query.
     // Update the state variable with the results.
   };
-
+  console.log(classrooms.filter(classrooms=> classrooms.name.includes("cs")))
   return (
 <>
-<div className="flex flex-row justify-center items-center mb-5 ">
+<div className="flex flex-row  justify-center items-center mb-5 ">
     
   
-      <input type="text" value={query} className=" rounded-xl w-[300px] items-center  p-1" placeholder="   Tìm lớp học ở đây" onChange={(e) => setQuery(e.target.value)} />
+      <input type="text" value={query} 
+      className=" rounded-xl w-[300px] items-center  p-1" 
+      placeholder="   Tìm lớp học ở đây" 
+      onChange={(e) => setQuery(e.target.value)} />
   
     <button className="text-white hover:text-sky-500 pt-1 pb-1 pl-2 pr-2 items-center rounded-full transition-all duration-[0.3s] ease-[ease]" onClick={handleSearch}>
     <FontAwesomeIcon icon={faMagnifyingGlass} fade size="xl" style={{}} />
     </button>
     
     </div>
-      <nav className="flex justify-center items-center">
+      <nav className=" container m-auto grid grid-cols-10  max-lg:hidden  gap-4 justify-center items-center">
         {filters.map((category, idx) =>(
-      <button className="no-underline rounded-xl text-white py-[9px] px-4 font-medium  
-      mr-3 bg-gray-800 hover:bg-indigo-darker transition-all duration-[0.3s] ease-[ease]" 
+      <button className="no-underline rounded-xl text-white border-white w-auto  inline-block hover:border-black py-[9px] px-4 font-medium  
+      mr-3 bg-gray-800 hover:bg-white hover:text-black transition-all duration-[0.3s] ease-[ease]" 
       key={`filters-${idx}`}
       // onClick={()=> handleFilterButtonClick(category)}
+      // className={`button ${
+      //   selectedFilters?.includes(category) ? "active" : ""
+      // }`}
       >{category}</button>
 
         ))}
