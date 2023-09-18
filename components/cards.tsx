@@ -1,7 +1,6 @@
     'use client'
     import { useEffect, useState } from "react";
     import '/styles/globals.css'
-    import { Link } from "react-router-dom";
     import { inView, motion, useAnimation, useInView } from "framer-motion"
     import { Rating } from '@smastrom/react-rating'
     import '@smastrom/react-rating/style.css'
@@ -27,20 +26,20 @@ export const Cards = (): JSX.Element => {
           setSelectedFilters([...selectedFilters, selectedCategory]);
         }
       };
-      useEffect(() => {
-        filterClassrooms();
-      }, [selectedFilters]);
-      const filterClassrooms = () => {
-        if (selectedFilters.length > 0) {
-          let tempClassrooms = selectedFilters.map((selectedCategory) => {
-            let temp = classrooms.filter((classrooms) => classrooms.category === selectedCategory);
-            return temp;
-          });
-          setFilteredClassrooms(tempClassrooms.flat());
-        } else {
-          setFilteredClassrooms([...classrooms]);
-        }
-      };
+      // useEffect(() => {
+      //   filterClassrooms();
+      // }, [selectedFilters]);
+      // const filterClassrooms = () => {
+      //   if (selectedFilters.length > 0) {
+      //     let tempClassrooms = selectedFilters.map((selectedCategory) => {
+      //       let temp = classrooms.filter((classrooms) => classrooms.category === selectedCategory);
+      //       return temp;
+      //     });
+      //     setFilteredClassrooms(tempClassrooms.flat());
+      //   } else {
+      //     setFilteredClassrooms([...classrooms]);
+      //   }
+      // };
       return (
         <>
         <motion.div
@@ -65,21 +64,19 @@ export const Cards = (): JSX.Element => {
         </button>
         
         </div>
-          <nav className=" container hidden m-auto grid grid-cols-10 max-lg:hidden  gap-4 justify-center items-center">
+          {/* <nav className=" container m-auto grid grid-cols-10 max-lg:hidden  gap-4 justify-center items-center"> */}
             {/* implementing state */}
-            {filters.map((category, idx) =>(
-          <button 
-          className={`button ${
-            selectedFilters?.includes(category) ? "no-underline rounded-xl text-black border-black w-auto  inline-block hover:border-white py-[9px] px-4 font-medium  mr-3 bg-white  hover:shadow-[3px_3px_0_0_#5a5a5a]  transition-all duration-[0.3s] ease-[ease]" : "no-underline rounded-xl text-white border-white w-auto  inline-block hover:border-black py-[9px] px-4 font-medium  mr-3 bg-gray-800 hover:bg-white hover:shadow-[3px_3px_0_0_#a3a3a3] hover:text-black transition-all duration-[0.3s] ease-[ease]"
-          }`}
-          onClick={() => handleFilterButtonClick(category)}
-          key={`filters-${idx}`}
+            {/* {filters.map((category, idx) =>( */}
+          {/* <button  */}
+          {/* className={`button ${ */}
+            {/* selectedFilters?.includes(category) ? "no-underline rounded-xl text-black border-black w-auto  inline-block hover:border-white py-[9px] px-4 font-medium  mr-3 bg-white  hover:shadow-[3px_3px_0_0_#5a5a5a]  transition-all duration-[0.3s] ease-[ease]" : "no-underline rounded-xl text-white border-white w-auto  inline-block hover:border-black py-[9px] px-4 font-medium  mr-3 bg-gray-800 hover:bg-white hover:shadow-[3px_3px_0_0_#a3a3a3] hover:text-black transition-all duration-[0.3s] ease-[ease]" */}
+          {/* }`} */}
+          {/* onClick={() => handleFilterButtonClick(category)} */}
+          {/* key={`filters-${idx}`} */}
  
-          >{category}</button>
-
-            ))}
-
-          </nav>
+          {/* >{category}</button> */}
+            {/* ))} */}
+          {/* </nav> */}
           </motion.div>
 
           {/* card */}

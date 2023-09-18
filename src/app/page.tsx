@@ -1,8 +1,6 @@
 "use client"
 import Image from 'next/image'
 import Navbar from './../../components/navbar';
-import { useLocation } from 'react-router-dom';
-import { BrowserRouter } from 'react-router-dom';
 import { Cards } from '../../components/cards';
 import { useEffect, useState } from "react";
 import SearchBar from '../../components/searchbar';
@@ -20,8 +18,7 @@ import ScrollToTop from '../../components/scrolltotop';
 export default function Home() {
     return (
     
-
-      <BrowserRouter>
+      <>
       <ScrollToTop/>
       <Navbar/>
 
@@ -39,13 +36,12 @@ export default function Home() {
         
        
 
-       
-        <Cards/> 
+
+        <Cards/>  
         
         </motion.div>
         
-        
-      </BrowserRouter>
+        </>
       
       
    
