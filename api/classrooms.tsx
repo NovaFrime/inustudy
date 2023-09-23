@@ -141,7 +141,7 @@ export const classrooms = [
     },
     {
      "uid": "jonastyroller",
-     "image_url": "https://yt3.googleusercontent.com/C3IqlEaDU6FfSQjwvLA9kPuf8xjlLU7cfLBbJUat4BUSbcrBUnjBP3hhzBu3qQqeNGSn53aCRSA=s176-c-k-c0x00ffffff-no-rj",
+     "image_url": "https://yt3.googleusercontent.com/34MwE-17akWE4dF5Unuglj9AZfYTXfmlKd0vUqleH8hg15ZeZ68_YNZvWZ7OYAowBsE3mNzyxA=s176-c-k-c0x00ffffff-no-rj",
      "name": "Jonas Tyroller",
      "link": "https://www.youtube.com/@JonasTyroller",
      "description": "Một indie game dev, kênh của anh này cũng nổi tiếng, anh tạo content chủ yếu là về chuyện làm game, và anh còn bổ túc kinh nghiệm làm game cho người xem. Như GMTK hay Blackthornprod, hay Dani (khứa này off lâu lắm rồi nên mình sẽ không cho vào đây). Và vì là content hoàn toàn bằng tiếng anh, đôi khi bạn sẽ khó nghe anh ấy nói gì, nhớ bật subtitle lên coi nhé!",
