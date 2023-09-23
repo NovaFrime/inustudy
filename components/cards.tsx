@@ -65,7 +65,7 @@ export const Cards = (): JSX.Element => {
         </button>
         
         </div>
-          <nav className=" container hidden m-auto grid grid-cols-10 max-lg:hidden  gap-4 justify-center items-center">
+          <nav className=" container  m-auto grid grid-cols-10 max-lg:hidden  gap-4 justify-center items-center">
             {/* implementing state */}
             {filters.map((category, idx) =>(
           <button 

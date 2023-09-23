@@ -4,7 +4,7 @@ export const classrooms = [
      "image_url": "https://yt3.googleusercontent.com/WCfCvQI3p4hfmCWoHdLrJVvH9FanQsDi_MIeW81ESuPYPYzzMlkyGQkx51cP0pWBOHZdtqEVpQ=s176-c-k-c0x00ffffff-no-rj",
      "name": "IELTS with Charles",
      "link": "https://www.youtube.com/@IELTSwithCharles",
-     "description": "Một kênh youtube học IELTS khá ít người biết, nhưng có hiệu quả trong việc chia sẻ kinh nghiệm thực chiến trong phòng thi. Thầy chủ yếu chia sẻ kinh nghiệm phòng thi, đời sống và quan trọng nhất là dồn phần lớn nội dung cho LISTENING/SPEAKING.",
+     "description": "Một kênh youtube học IELTS khá ít người biết, nhưng có hiệu quả trong việc chia sẻ kinh nghiệm thực chiến trong phòng thi. Thầy chủ yếu chia sẻ kinh nghiệm phòng thi, đời sống và quan trọng nhất là dồn phần lớn nội dung cho LISTENING, SPEAKING.",
      "lang": "Tiếng Việt và Tiếng Anh.",
      "category": "['Tiếng Việt','Tiếng Anh','IELTS']",
      "rating": 4
