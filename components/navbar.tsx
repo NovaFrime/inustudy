@@ -34,7 +34,7 @@ const particlesLoaded = useCallback(async (container: Container | undefined) => 
       <div className="pr-[100px]  flex justify-between items-center">
       <Particles
     id="tsparticles"
-    className='absolute w-full mb-[90px]'
+    className='absolute w-full mb-[30px]'
     init={particlesInit}
     loaded={particlesLoaded}
     options={{
