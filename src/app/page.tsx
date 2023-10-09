@@ -28,6 +28,7 @@ export default function Home() {
         
         <Cards/>
         </motion.div>
+        <div className='bottom-0 flex h-[70vh]'></div>
         <Footer/>
         </>
   )
