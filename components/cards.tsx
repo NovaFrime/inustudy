@@ -12,11 +12,41 @@
 export const Cards = (): JSX.Element => {
       const [query, setQuery] = useState('')
       const [filteredList, setFilteredList] = useState(classrooms);
-      let category = ["IT & CSE","C/C++","Tiếng Việt","Tiếng Anh","Tiếng Trung","IELTS","Nấu Ăn","Fullstack","Frontend","Lập Trình","Backend","Piano","Design","Nhiều Thứ","Vẽ","Lịch Sử","Thuật Toán","Hóa Học","",""];
+      let filters = ["IT & CSE","C/C++","Tiếng Việt","Tiếng Anh","Tiếng Trung","IELTS","Nấu Ăn","Fullstack","Frontend","Lập Trình","Backend","Piano","Design","Nhiều Thứ","Vẽ","Lịch Sử","Thuật Toán","Hóa Học","",""];
       return (
         <>
+        <div className="flex flex-row  justify-center items-center mb-5 lg:mt-[-100px]">
+            
+                <input type="text" value={query} 
+                className=" rounded-xl w-[300px] items-center  p-1" 
+                placeholder="   Tìm lớp học ở đây" 
+                onChange={(e) => setQuery(e.target.value)} />
+
+            <button className="text-white hover:text-sky-500 pt-1 pb-1 pl-2 pr-2 items-center rounded-full transition-all duration-[0.3s] ease-[ease]">
+            <FontAwesomeIcon icon={faMagnifyingGlass} fade size="xl" style={{}} />
+            </button>
+            
+            </div>
+                <nav className=" container m-auto grid grid-cols-10  max-lg:hidden  gap-4 justify-center items-center">
+                {filters.map((category, idx) =>(
+                <button className="no-underline rounded-xl text-white border-white w-auto brake-all  inline-block hover:border-black py-[9px] px-4 font-medium  
+                mr-3 bg-gray-800 hover:bg-white hover:text-black transition-all duration-[0.3s] ease-[ease]" 
+                key={`filters-${idx}`}
+                // onClick={()=> handleFilterButtonClick(category)}
+                // className={`button ${
+                //   selectedFilters?.includes(category) ? "active" : ""
+                // }`}
+                >{category}</button>
+
+                ))}
+
+                </nav>
+          
+        <div className='grid grid-cols-1 md:grid-cols-3 sm:grid-cols-2 lg:grid-cols-4  
+        px-2 pb-0 pt-0 gap-2 sm:px-3 md:px-4 lg:px-[80px]
+        sm:gap-3 md:gap-6 lg:gap-10
+        scroll-smooth focus:scroll-auto'>
         {classrooms.map((classroom) =>
-        
         <a href={classroom.link} key={classroom.uid} className="max-w-sm group hover:bg-white shadow-lg rounded-lg my-4 transition-all duration-[0.6s] ease-[ease]s">
         <img className="flex rounded-full object-cover mt-10 w-[100px] h-[100px] mx-auto" 
         src={classroom.image_url} 
@@ -32,7 +62,7 @@ export const Cards = (): JSX.Element => {
             </div>
         </div>
     </a>
-    )}
+    )}</div>
     
         </>
       );

@@ -15,7 +15,6 @@ export default function Home() {
       <ScrollToTop/>
       <Navbar/>
       <div className='p-1 pt-0 sm:p-3 md:p-6 lg:p-10'>
-      <SearchBar/>
       </div>
       <motion.div
         variants={{
@@ -26,24 +25,8 @@ export default function Home() {
         animate="visible"
         transition={{duration: 1, delay:0.25}}
         >
-        <div className='grid grid-cols-1 md:grid-cols-3 sm:grid-cols-2 lg:grid-cols-4  
-        px-2 pb-0 pt-0 gap-2 sm:px-3 md:px-4 lg:px-[80px]
-        sm:gap-3 md:gap-6 lg:gap-10
-        scroll-smooth focus:scroll-auto'>
-        {/* <Cards/> 
-        <Cards/> 
-        <Cards/> 
-        <Cards/> 
-        <Cards/> 
-        <Cards/> 
-        <Cards/> 
-        <Cards/> 
-        <Cards/> 
-        <Cards/> 
-        <Cards/> 
-        <Cards/> */}
+        
         <Cards/>
-        </div>  
         </motion.div>
         <Footer/>
         </>
