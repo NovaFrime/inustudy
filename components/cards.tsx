@@ -17,7 +17,7 @@ export const Cards = (): JSX.Element => {
         <>
         {classrooms.map((classroom) =>
         
-        <div key={classroom.uid} className="max-w-sm group hover:bg-white shadow-lg rounded-lg my-4 transition-all duration-[0.6s] ease-[ease]s">
+        <a href={classroom.link} key={classroom.uid} className="max-w-sm group hover:bg-white shadow-lg rounded-lg my-4 transition-all duration-[0.6s] ease-[ease]s">
         <img className="flex rounded-full object-cover mt-10 w-[100px] h-[100px] mx-auto" 
         src={classroom.image_url} 
         alt="avatar"/>
@@ -31,8 +31,9 @@ export const Cards = (): JSX.Element => {
                 <h1 className="group-hover:px-2 group-hover:text-sm scale-0 group-hover:scale-100 group-hover:flex group-hover:bg-yellow-200 group-hover:rounded-lg transition-all duration-[1.5s] ease-[ease]">Tag 3</h1> */}
             </div>
         </div>
-    </div>)}
-            
+    </a>
+    )}
+    
         </>
       );
     };
