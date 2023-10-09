@@ -8,98 +8,31 @@
     import { classrooms } from "../api/classrooms";
     import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
     import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-
+    import SearchBar from "./searchbar";    
 export const Cards = (): JSX.Element => {
       const [query, setQuery] = useState('')
+      const [filteredList, setFilteredList] = useState(classrooms);
       let category = ["IT & CSE","C/C++","Tiếng Việt","Tiếng Anh","Tiếng Trung","IELTS","Nấu Ăn","Fullstack","Frontend","Lập Trình","Backend","Piano","Design","Nhiều Thứ","Vẽ","Lịch Sử","Thuật Toán","Hóa Học","",""];
       return (
         <>
-        <motion.div
-        variants={{
-          hidden: { opacity: 0, y: 75},
-          visible: {opacity: 1, y: 0},
-        }}
-        initial="hidden"
-        animate="visible"
-        transition={{duration: 0.7, delay:0.2}}
-        >
-        <div className="flex flex-row  justify-center items-center mb-5 ">
-    
-  
-          <input type="text" value={query} 
-          className=" rounded-xl w-[300px] items-center  p-1 " 
-          placeholder="   Tìm lớp học ở đây" 
-          onChange={(e) => setQuery(e.target.value)} />
-
-        <button className="text-white  hover:text-sky-500 pt-1 pb-1 pl-2 pr-2 items-center rounded-full transition-all duration-[0.3s] ease-[ease]">
-        <FontAwesomeIcon icon={faMagnifyingGlass} fade size="xl" style={{}} />
-        </button>
+        {classrooms.map((classroom) =>
         
-        </div>
-          <nav className=" container  m-auto grid grid-cols-10 max-lg:hidden  gap-4 justify-center items-center">
-            {/* implementing state */}
-            
-          <button 
-          className="no-underline rounded-xl text-black border-black w-auto  inline-block hover:border-white py-[9px] px-4 font-medium  mr-3 bg-white  hover:shadow-[3px_3px_0_0_#5a5a5a]  transition-all duration-[0.3s] ease-[ease]" 
-          
- 
-          ></button>
+        <div key={classroom.uid} className="max-w-sm group hover:bg-white shadow-lg rounded-lg my-4 transition-all duration-[0.6s] ease-[ease]s">
+        <img className="flex rounded-full object-cover mt-10 w-[100px] h-[100px] mx-auto" 
+        src={classroom.image_url} 
+        alt="avatar"/>
+        <div className="py-4 px-6">
+            <h1 className="text-2xl font-semibold text-white group-hover:text-black">{classroom.name}</h1>
+            <p className="py-2 text-lg text-gray-200 group-hover:text-gray-700">{classroom.description}</p>
+        <div className="mt-[-10] group-hover:mt-[-2] bottom-0 group-hover:text-gray-700 transition-all duration-[0.6s] ease-[fade]">
+                <h1 className="px-2 text-sm scale-0 group-hover:scale-100 inline-block mr-2 group-hover:bg-blue-200 rounded-lg transition-all duration-[1.5s] ease-[ease]">{classroom.category.toString().replaceAll("'","").replaceAll("[","").replaceAll("]","").replaceAll(","," và ")}</h1>
 
-
-          </nav>
-          </motion.div>
-
-          {/* card */}
-          <div className='max-w-[1320px] items-center mx-auto grid lg:grid-cols-4 md:grid-cols-2 gap-2 lg:px-0 sm:px-[20px] px-[20px]'> 
-          
-        <div className="w-auto h-auto group " >
-
-          <a>
-
-          <div className="flex group content-center justify-center  w-auto h-auto mt-[20px] transition-all duration-[0.3s] ease-[ease] ">
-          <motion.div
-          whileHover={
-            {
-            scale:1.1,
-            textShadow:"0px 0px 12px rgb(255,255,255)",
-          }
-          
-          }
-        >
-            <div className="relative w-[275px] h-[294px] -top-px -left-px rounded-[33px] border-black group-hover:bg-white group bg-gray-800 border border-solid shadow-[0px_4px_4px_#00000040]">
-              <div className=" transition-all duration-[0.3s] ease-[ease] absolute overflow-scroll no-scrollbar scroll-smooth w-[248px] h-[161px] top-[99px] left-[13px] group-hover:bg-slate-100  rounded-[19px] border-[#888888] bg-gray-800 border border-solid shadow-[0px_4px_4px_#00000040]">
-                <p className="group-hover:text-black text-justify	absolute w-[224px] shrink top-[7px] left-[11px] right-[11px] [font-family:'Tahoma-Regular',Helvetica] font-normal text-white text-[100%] tracking-[0] leading-[normal]">
-                
-                </p>
-              </div>
-              <img
-                className="absolute w-[65px] h-[65px] top-[14px] left-[14px] rounded-full object-cover"
-                alt="Image url"
-                loading="lazy"
-                src={"/"}
-              />
-              <div className="group-hover:text-black absolute break-all mr-5 w-fit shrink top-[14px] left-[92px] [font-family:'Tahoma-Regular',Helvetica] font-normal text-white text-[21px] tracking-[0] leading-[normal]">
-              
-              </div>
-              <div className="absolute w-[147px] top-[46px] left-[92px] [font-family:'Tahoma-Regular',Helvetica] font-normal text-white text-[11px] tracking-[0] leading-[normal]">
-                
-                
-              </div>
-            <Rating
-              style={{ maxWidth: 100 }}
-              value={0}
-              readOnly
-              className="absolute top-[64px] left-[92px] "
-            />
-             
+                {/* <h1 className="group-hover:px-2 group-hover:text-sm scale-0 group-hover:scale-100 group-hover:flex group-hover:bg-purple-200 group-hover:rounded-lg transition-all duration-[1.2s] ease-[ease]">Tag 2</h1>
+                <h1 className="group-hover:px-2 group-hover:text-sm scale-0 group-hover:scale-100 group-hover:flex group-hover:bg-yellow-200 group-hover:rounded-lg transition-all duration-[1.5s] ease-[ease]">Tag 3</h1> */}
             </div>
-            </motion.div>
-          </div>
-         
-          </a>
         </div>
-        
-        </div>
+    </div>)}
+            
         </>
       );
     };

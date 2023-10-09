@@ -5,15 +5,7 @@
 @layer utilities {
     @variants responsive {
       /* Hide scrollbar for Chrome, Safari and Opera */
-      .no-scrollbar::-webkit-scrollbar {
-          display: none;
-      }
-
-      /* Hide scrollbar for IE, Edge and Firefox */
-      .no-scrollbar {
-          -ms-overflow-style: none;  /* IE and Edge */
-          scrollbar-width: none;  /* Firefox */
-      }
+      
     }
   }
   .animate-gradient {
@@ -33,4 +25,29 @@
   100% {
     background-position: 0% 50%;
   }
+}
+
+@tailwind base; 
+@tailwind components; 
+@tailwind utilities; 
+  
+/* width */
+::-webkit-scrollbar { 
+    width: 5px; 
+} 
+  
+/* Track */
+::-webkit-scrollbar-track { 
+    background: #2a2737; 
+} 
+  
+/* Handle */
+::-webkit-scrollbar-thumb { 
+    background: #b4b3b3; 
+    border-radius: 5px; 
+} 
+  
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover { 
+    background: #555; 
 }

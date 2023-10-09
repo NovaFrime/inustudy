@@ -1,6 +1,7 @@
 "use client"
 import Navbar from './../../components/navbar';
-import { Cards } from '../../components/test';
+// import { Cards } from '../../components/test';
+import { Cards } from '../../components/cards';
 import { useEffect, useState } from "react";
 import SearchBar from '../../components/searchbar';
 import React from 'react';
@@ -27,7 +28,9 @@ export default function Home() {
         >
         <div className='grid grid-cols-1 md:grid-cols-3 sm:grid-cols-2 lg:grid-cols-4  
         px-2 pb-0 pt-0 gap-2 sm:px-3 md:px-4 lg:px-[80px]
-        sm:gap-3 md:gap-6 lg:gap-10'>
+        sm:gap-3 md:gap-6 lg:gap-10
+        scroll-smooth focus:scroll-auto'>
+        {/* <Cards/> 
         <Cards/> 
         <Cards/> 
         <Cards/> 
@@ -38,7 +41,7 @@ export default function Home() {
         <Cards/> 
         <Cards/> 
         <Cards/> 
-        <Cards/> 
+        <Cards/> */}
         <Cards/>
         </div>  
         </motion.div>
