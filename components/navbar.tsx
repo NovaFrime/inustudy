@@ -27,7 +27,7 @@ const particlesLoaded = useCallback(async (container: Container | undefined) => 
   return (
     <>
 
-    <div className='rounded-3xl content-center mb-[50px] pt-1 pr-2'>
+    <div className='rounded-3xl content-center mb-3 md:mb-[50px] lg:mb-[50px] pt-1 pr-2'>
   
       <nav className="shadow-sm content-center">
 
@@ -106,7 +106,7 @@ const particlesLoaded = useCallback(async (container: Container | undefined) => 
         detectRetina: true,
     }}
 />
-        <Link href="/" className='mt-3  mx-6 pb-4'>
+        <Link href="/" className='md:mt-3 lg:mt-3 scale-50 md:scale-100 lg:scale-100 lg:mx-6 md:mx-6 lg:pb-4 md:pb-4 mt-2 '>
           <Image
                 src="/logo-header.png"
                 width={225}
