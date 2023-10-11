@@ -27,7 +27,10 @@ export const Cards = (): JSX.Element => {
             </button>
             
             </div>
-                <nav className=" container m-auto grid grid-cols-10  max-lg:hidden  gap-4 justify-center items-center">
+                {/* please add grid to this dude */}
+                <nav className=" container m-auto
+                 
+                 grid-cols-10  max-lg:hidden hidden gap-4 justify-center items-center">
                 {filters.map((category, idx) =>(
                 <button className="no-underline rounded-xl text-white border-white w-auto brake-all  inline-block hover:border-black py-[9px] px-4 font-medium  
                 mr-3 bg-gray-800 hover:bg-white hover:text-black transition-all duration-[0.3s] ease-[ease]" 
