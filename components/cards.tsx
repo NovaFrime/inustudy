@@ -11,6 +11,7 @@
     import SearchBar from "./searchbar";    
 export const Cards = (): JSX.Element => {
       const [query, setQuery] = useState('')
+      
       const [filteredList, setFilteredList] = useState(classrooms);
       let filters = ["IT & CSE","C/C++","Tiếng Việt","Tiếng Anh","Tiếng Trung","IELTS","Nấu Ăn","Fullstack","Frontend","Lập Trình","Backend","Piano","Design","Nhiều Thứ","Vẽ","Lịch Sử","Thuật Toán","Hóa Học","",""];
       return (
@@ -29,16 +30,16 @@ export const Cards = (): JSX.Element => {
             </div>
                 {/* please add grid to this dude */}
                 <nav className=" container m-auto
-                 
-                 grid-cols-10  max-lg:hidden hidden gap-4 justify-center items-center">
+                 grid
+                 grid-cols-10  max-lg:hidden gap-4 justify-center items-center">
                 {filters.map((category, idx) =>(
                 <button className="no-underline rounded-xl text-white border-white w-auto brake-all  inline-block hover:border-black py-[9px] px-4 font-medium  
                 mr-3 bg-gray-800 hover:bg-white hover:text-black transition-all duration-[0.3s] ease-[ease]" 
                 key={`filters-${idx}`}
                 // onClick={()=> handleFilterButtonClick(category)}
                 // className={`button ${
-                //   selectedFilters?.includes(category) ? "active" : ""
-                // }`}
+                // selectedFilters?.includes(category) ? "active" : ""
+                //  }`}
                 >{category}</button>
 
                 ))}
