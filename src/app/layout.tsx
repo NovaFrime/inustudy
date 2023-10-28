@@ -21,7 +21,7 @@ export default function RootLayout({
     <html lang="en">
 
         <body className=" z-[-1] static bg- min-h-screen  bg-[conic-gradient(at_bottom_right,_var(--tw-gradient-stops))]
-         from-white via-white to-slate-900 bg-no-repeat w-full h-full no-scrollbar scroll-smooth">
+         from-white via-white to-slate-900 bg-no-repeat w-full h-full no-scrollbar scroll-smooth transition-all duration-[0.6s] ease-[ease]s">
 
         
         
