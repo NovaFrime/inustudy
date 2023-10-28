@@ -1,6 +1,5 @@
-// version 0.1
-export const classrooms = [
-    {
+[    
+	{
      "uid": "ieltswithcharles",
      "image_url": "https://yt3.googleusercontent.com/WCfCvQI3p4hfmCWoHdLrJVvH9FanQsDi_MIeW81ESuPYPYzzMlkyGQkx51cP0pWBOHZdtqEVpQ=s176-c-k-c0x00ffffff-no-rj",
      "name": "IELTS with Charles",
@@ -490,4 +489,4 @@ export const classrooms = [
      "category": "['Nhiều Thứ','Tiếng Việt']",
      "rating": 5
     }
-   ]
+]
